@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ليلة العمر | عبدالرحمن</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: radial-gradient(ellipse at top, #30230c, #080808 65%);
+  color: #f7df9b;
+  font-family: Tahoma, Arial, sans-serif;
+  text-align: center;
+}
+
+.stars {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  bottom: -20px;
+  width: 4px;
+  height: 4px;
+  background: #ffdf80;
+  border-radius: 50%;
+  box-shadow: 0 0 12px 3px #d6a638;
+  animation: rise linear infinite;
+}
+
+.star:nth-child(1) { left: 8%; animation-duration: 7s; }
+.star:nth-child(2) { left: 22%; animation-duration: 10s; animation-delay: 2s; }
+.star:nth-child(3) { left: 39%; animation-duration: 8s; animation-delay: 1s; }
+.star:nth-child(4) { left: 57%; animation-duration: 11s; }
+.star:nth-child(5) { left: 73%; animation-duration: 9s; animation-delay: 3s; }
+.star:nth-child(6) { left: 91%; animation-duration: 7s; animation-delay: 2s; }
+.star:nth-child(7) { left: 48%; animation-duration: 12s; animation-delay: 4s; }
+.star:nth-child(8) { left: 82%; animation-duration: 10s; animation-delay: 1s; }
+
+@keyframes rise {
+  0% { transform: translateY(0) scale(.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  width: min(90%, 520px);
+  margin: 45px auto;
+  padding: 35px 22px;
+  border: 1px solid #d6b45b;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #1c1911ee, #080808f5);
+  box-shadow: 0 0 25px #d6a63825, inset 0 0 25px #d6a63810;
+  animation: appear 1.8s ease both, glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: perspective(900px) rotateX(18deg) translateY(50px) scale(.92); }
+  to { opacity: 1; transform: perspective(900px) rotateX(0) translateY(0) scale(1); }
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 15px #d6a63820, inset 0 0 15px #d6a63808; }
+  to { box-shadow: 0 0 38px #d6a63845, inset 0 0 25px #d6a63815; }
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 25px;
+  border: 2px solid #f5d779;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  background: radial-gradient(circle, #493713, #100e08);
+  box-shadow: 0 0 25px #d6a63870;
+  animation: float 3s ease-in-out infinite, logoGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotateY(0); }
+  50% { transform: translateY(-9px) rotateY(12deg); }
+}
+
+@keyframes logoGlow {
+  from { text-shadow: 0 0 4px #f5d779; }
+  to { text-shadow: 0 0 18px #fff0ad, 0 0 30px #d6a638; }
+}
+
+h1 {
+  font-size: clamp(25px, 6vw, 34px);
+  line-height: 1.7;
+  text-shadow: 0 0 15px #d6a63855;
+}
+
+p { line-height: 2; }
+
+.subtitle { color: #fff0c4; }
+
+.line {
+  width: 65%;
+  height: 1px;
+  margin: 22px auto;
+  background: linear-gradient(90deg, transparent, #f5d779, transparent);
+}
+
+.details {
+  margin-top: 22px;
+  padding: 12px;
+  border: 1px solid #8f7135;
+  border-radius: 14px;
+  background: #d6a63808;
+  line-height: 2.3;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.unit {
+  min-width: 65px;
+  padding: 10px 7px;
+  border: 1px solid #9d7c36;
+  border-radius: 10px;
+  background: #d6a63812;
+}
+
+.unit strong {
+  display: block;
+  font-size: 23px;
+  color: #fff0b7;
+}
+
+.unit span { font-size: 12px; }
+
+footer {
+  margin-top: 25px;
+  color: #fff0c4;
+  animation: fade 3s ease both;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="stars" aria-hidden="true">
+  <i class="star"></i><i class="star"></i>
+  <i class="star"></i><i class="star"></i>
+  <i class="star"></i><i class="star"></i>
+  <i class="star"></i><i class="star"></i>
+</div>
+<main>
+  <div class="logo">ع م</div>
+
+  <p>✦ بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ ✦</p>
+  <div class="line"></div>
+
+  <p class="subtitle">دعوة لحضور ليلة العمر</p>
+  <h1>عبدالرحمن ناجح محمود</h1>
+  <p>والآنسة الكريمة</p>
+
+  <div class="line"></div>
+  <p class="subtitle">يشرفنا حضوركم ومشاركتنا أجمل فرحة</p>
+
+  <section class="details">
+    <p>📅 الثلاثاء 10 نوفمبر 2026</p>
+    <p>🕗 الساعة 8 مساءً</p>
+    <p>📍 مجمع قاعات سيله</p>
+    <p>قاعة Tuled</p>
+  </section>
+
+  <p>✦ الوقت المتبقي على ليلة العمر ✦</p>
+  <div class="countdown" id="countdown">
+    <div class="unit"><strong>--</strong><span>يوم</span></div>
+    <div class="unit"><strong>--</strong><span>ساعة</span></div>
+    <div class="unit"><strong>--</strong><span>دقيقة</span></div>
+    <div class="unit"><strong>--</strong><span>ثانية</span></div>
+  </div>
+
+  <footer>حضوركم يسعدنا ويكمل فرحتنا 💛</footer>
+<div style="text-align:right; margin:20px 10px 10px; padding:15px; border-top:1px solid #a98a49; color:#d4af61; font-family:Georgia,serif;">
+  <div style="font-size:14px; margin-bottom:8px;">༺ الـمُـصَـمِّـم ༻</div>
+  <div style="font-size:16px; letter-spacing:1px;">YOUSEF EL JOKER</div>
+  <div style="font-size:9px; margin-top:8px; line-height:1.9; letter-spacing:1px;">
+    CYBERSECURITY<br>
+    SOFTWARE DEVELOPER<br>
+    WEB DESIGNER &amp; PROGRAMMER
+  </div>
+</div>
+<audio controls preload="metadata" style="width:90%; max-width:320px; display:block; margin:20px auto;">
+  <source src="music/joker22mp4" type="audio/mpeg">
+  متصفحك لا يدعم تشغيل الصوت.
+</audio>
+</main>
+<script>
+const wedding = new Date(2026, 10, 10, 20, 0, 0);
+
+function updateCountdown() {
+  let diff = wedding.getTime() - Date.now();
+  const box = document.getElementById("countdown");
+
+  if (diff <= 0) {
+    box.innerHTML = "<p>ألف مبروك للعروسين ❤️</p>";
+    return;
+  }
+
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const minutes = Math.floor((diff % 3600000) / 60000);
+  const seconds = Math.floor((diff % 60000) / 1000);
+
+  const values = [days, hours, minutes, seconds];
+  const labels = ["يوم", "ساعة", "دقيقة", "ثانية"];
+
+  box.innerHTML = values.map((value, i) =>
+    `<div class="unit"><strong>${value}</strong><span>${labels[i]}</span></div>`
+  ).join("");
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>
